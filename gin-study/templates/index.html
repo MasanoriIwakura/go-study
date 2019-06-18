@@ -1,4 +1,12 @@
 {{define "content"}}
   <h1>Welcome to gin-study</h1>
   <div>{{ .message }}</div>
+  <h2>links</h2>
+  <div>
+    {{range $index, $link := .links}}
+      <div>
+        <a href="{{$link.Url}}">{{$link.Name}}</a>
+      </div>
+    {{end}}
+  </div>
 {{end}}
